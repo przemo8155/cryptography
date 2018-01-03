@@ -1,0 +1,29 @@
+﻿1) Uruchomienie programu
+Program 'Main.py' napisany w języku programowania python.
+Aby uruchomić program należy użyć komendy 'python Main.py' (należy mieć zainstalowanego pythona).
+
+2) Odgadnięcie klucza
+Program automatycznie odgaduje klucz do podanego tekstu. W moim przypadku kluczem jest 'pirat'.
+Zaimplementowałem metody Kasinskiego i Friedmana do odgadnięcia klucza.
+
+3) Odszyfrowany tekst
+Tekst wyświetla się na bieżąco w uruchomionym programie. 
+Ale ja natomiast przepisałem go do osobnego pliku, gdzie jest 'po polsku' (ze znakami interpunkcyjnymi i spacjami).
+
+4) Pliki
+- czestosci_liter.txt - częstości występowania liter w języku polskim
+- czestosci.txt - tabele częstości znaków szyfrogramu dla kolejnych liter klucza
+- szyfr.txt - szyfrogram
+- odszyfrowany_szyfr.txt - odszyfrowany szyfr bez znaków interpunkcyjnych i spacji
+- odszyfrowany_szyfr_po_polsku.txt - odszyfrowany szyfr 'po polsku'
+
+5) Metody
+Metoda Kasiskiego polega na wyszukiwaniu powtarzających się ciągów w tekście (więcej niż 3 znakowych).
+Po obliczeniu przesunięć dla każdego z powtórzeń, obliczany jest największy wspólny dzielnik dla każdej pary przesunięć. 
+Jako długość klucza brana jest mediana ze zbioru NWD przesunięć.
+
+Metoda Friedmana polega natomiast na analizowaniu ilości koincydencji. 
+Po sprawdzeniu ile znaków powtarza się w tekście dla każdego przesunięcia, 
+zostają wybrane takie które są większe od średniej liczby powtórzeń powiększonej o wartość odchylenia standardowego. 
+
+W obu metodach długość klucza wyniosła 5.
